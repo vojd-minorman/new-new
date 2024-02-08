@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive block</title>
+    <style>
+
+.flex-center{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.vw-4{
+    width: 33.3333333%;
+}
+.h500{
+    height: 500px;
+}
+.tete, .pieds {
+  float: left;
+  background-color: red;
+}
+
+.corps {
+    display: flex;
+  float: left;
+  background-color: aquamarine;
+}
+
+/* Use a media query to add a breakpoint at 800px: */
+@media screen and (max-width: 576px) {
+    .vw-12{
+        width: 100%;
+    }
+}
+@media screen  and (min-width : 577px) and (max-width : 992px) {
+    .vw-6{
+        width: 50%;
+    }
+    .pieds{
+        background-color: blue;
+        width: 100%;
+    }
+    
+}
+</style>
+    </style>
+</head>
+<body>
+    <div class="vw-4 vw-6 vw-12 flex-center h500 tete">
+        <p>One</p>
+    </div>
+    <div class="vw-4 vw-6 vw-12 flex-center h500 corps">
+        <p>Two</p>
+    </div>
+    <div class="vw-4 vw-12 flex-center h500 pieds">
+        <p>Three</p>
+    </div>
+</body>
+</html>
